@@ -1,34 +1,28 @@
-<html>
+﻿<html dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>Tutorial - git init</title>
+  <meta charset="utf-8"></meta>
+  <title>Tutorial Git</title>
 
-  <link
-    href='https://fonts.googleapis.com/css?family=Open+Sans'
-    rel='stylesheet'
-    type='text/css'
-  >
-  <link rel="stylesheet" href="octicons/octicons.css">
-  <link rel="stylesheet" href="style.css">
+  <link href="asset?aid=0" rel="stylesheet" type="text/css"></link>
+  <link rel="stylesheet" href="octicons/octicons.css"></link>
+  <link rel="stylesheet" href="style.css"></link>
 </head>
-<body>
+<body dir="ltr">
   <div id="header">
-    <h1 class="header-title">git init</h1>
+    <h1 class="header-title">Iniciando com o Git</h1>
     <ul class="header-menu">
       <li class="header-menu_item header-menu_item-active">
         Tutorial
       </li>
       <li class="header-menu_item">
-        <a href="cheatsheet.html">Cheatsheet</a>
+        <a href="cheatsheet.html">Folha de dicas</a>
       </li>
       <li class="header-menu_item">
-        <a href="resources.html">Resources</a>
+        <a href="resources.html">recursos</a>
       </li>
       <li class="header-menu_item">
-        <a
-          class="header-github mega-octicon octicon-mark-github"
-          href="https://github.com/pel-daniel/git-init"
-        ></a>
+        <a class="header-github mega-octicon octicon-mark-github"
+         href="https://github.com/pel-daniel/git-init"></a>
       </li>
     </ul>
   </div>
@@ -36,353 +30,353 @@
     <div id="side-bar">
       <div class="instructions">
         <div class="step step1" data-id="1">
-          <h3><span class="instructions-step">1/13</span> Introduction</h3>
+          <h3><span class="instructions-step">1/13</span> Introdução</h3>
 
           <div class="instructions-message">
             <h5>
-              <span class="octicon octicon-info"></span>
-              Instruções
+              <span class="octicon octicon-info"></span> Instruções
             </h5>
 
             <p>
-              Every step in the tutorial starts with a text. At the end of the
-              text is a button that starts the execution of a git command.
+              Cada passo no tutorial inicia com um texto. No final de cada
+              texto há um botão que inicia a execução do comando git.
             </p>
             <p>
-              After clicking the button 4 things will happen, in the following order:
+              Após clicar no botão 4 coisas vão acontecer, na seguinte sequência:
             </p>
             <ul>
-              <li>In the console (at the bottom left): The command will be added and executed.</li>
-              <li>On the right: An animation will show what the command does.</li>
-              <li>When the animation ends, the console shows the output of the command.</li>
-              <li>At the right of the button will appear a link to go to the next step.</li>
+              <li>No console (no canto inferior esquerdo):
+                  O comando será adicionado e executado.</li>
+
+
+              <li>À direita: Uma animação mostrará o que o comando faz.</li>
+              <li>Quando a animação termina, o console mostra a saída do comando.</li>
+              <li>À direita do botão aparecerá um link para ir para a próxima etapa.</li>
             </ul>
           </div>
 
           <p>
-            The official definition of git is "a distributed version control system".
-            But what does it mean? Let's use an example to explain it.
+            A definição oficial de git é "um sistema de controle de versão distribuído".
+            Mas o que isto significa? Vamos usar um exemplo para explicar isso.
           </p>
           <p>
-            In the next table we have some changes we did to a file:
+            Na tabela abaixo temos algumas mudanças que fizemos em um arquivo:
           </p>
 
           <table>
             <thead>
               <tr>
-                <th>Time</th>
+                <th>Tempo</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
+
               <tr>
-                <td>July 7, 10:00</td>
-                <td>Create file <span class="instructions-term">tasks.txt</span>.</td>
+                <td>07 de julho, 10:00</td>
+                <td>Arquivo <span class="instructions-term">tasks.txt</span>
+                  criado. </td>
               </tr>
+
               <tr>
-                <td>July 7, 10:05</td>
+                <td>07 de julho, 00:05</td>
                 <td>
-                  Add paragraph to file <span class="instructions-term">tasks.txt</span>.
+                  Adicionar paragrafo para o arquivo <span class="instructions-term">
+                  tasks.txt.</span>
                 </td>
               </tr>
+
               <tr>
-                <td>July 7, 10:10</td>
+                <td>07 de julho, 10:10</td>
                 <td>
-                  Format the content of <span class="instructions-term">tasks.txt</span>.
+                  Formatar o conteúdo de <span class="instructions-term">tasks.txt.</span>
                 </td>
               </tr>
+
               <tr>
-                <td>…</td>
-                <td>…</td>
+                <td>...</td>
+                <td>...</td>
               </tr>
+
             </tbody>
           </table>
 
           <p>
-            We can think of every row in the table as a version of the file.
-            So git is a system that helps us track version or changes of files
-            through time (it is also distributed, but that's a feature for another
-            tutorial).
+            Podemos supor que cada uma das linhas na tabela é
+            uma versão do arquivo.
+            Então o git é um sistema que nos ajuda a rastrear a versão ou
+            alterações de arquivos ao longo do tempo
+            (ele também é distribuído, mas vamos deixar isso para outro tutorial).
           </p>
 
-          <h4>Git basics</h4>
+          <h4>Conceitos básicos do Git</h4>
           <p>
-            To initialize git inside a folder, we use the command
-            <span class="instructions-term">git init</span>. After executing this
-            command, git will start tracking changes inside the folder.
+            Para inicializar o git em uma pasta, usaremos o comando
+            <span class="instructions-term">git init.</span>
+            Depois de executar este comando, o git vai começar a
+            monitorar mudanças dentro desta pasta.
           </p>
           <p>
-            Internally git have three states (also called areas) where changes
-            can be in: working directory, staging area, and repository.
+            Internamente o git têm três estados (também chamados de áreas) onde
+            as mudanças podem ser feitas: diretório de trabalho, área de testes
+            e repositório local.
           </p>
           <p>
-            Click the next button to start the animation.
+            Clique no botão abaixo para iniciar a animação.
           </p>
 
-          <a class="command-trigger">
-            git init
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git init</a>
+          <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step2" data-id="2">
-          <h3><span class="instructions-step">2/13</span> First changes</h3>
+          <h3><span class="instructions-step">2/13</span> Primeiras Mudanças</h3>
 
           <p>
-            The first thing we need to see git in action, is a file.
-            We can create a new file with the command
-            <span class="instructions-term">touch</span> and passing a filename
-            as the first argument (this is a UNIX command not a git one).
+            A primeira coisa que precisamos para ver o git em ação, é um arquivo.
+            Podemos criar um novo arquivo com o comando
+            <span class="instructions-term">touch</span> e passando um nome de
+            arquivo como argumento (este é não é um comando git e sim UNIX).
           </p>
+
           <p>
-            This command will create the file <span class="instructions-term">tasks.txt</span>.
-            In this file we will keep a list of tasks we need to do.
+            Este comando irá criar o arquivo
+            <span class="instructions-term">tasks.txt</span>.
+            Neste arquivo, vamos manter uma lista de tarefas que precisamos fazer.
           </p>
+
           <p>
-            The working directory area tracks all changes we make inside the
-            folder. So git will show this new file inside this area.
+            O diretório de trabalho rastreia todas as mudanças que fazemos dentro
+            da pasta. Então o git irá mostrar esse novo arquivo dentro desta área.
           </p>
-          <a class="command-trigger">
-            touch tasks.txt
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+
+          <a class="command-trigger">touch tasks.txt</a>
+          <a class="instructions-link next-step hidden">Próximo</a>
         </div>
+
         <div class="hidden step step3" data-id="3">
           <h3>
-            <span class="instructions-step">3/13</span> Adding changes to the
-            staging area
+            <span class="instructions-step">3/13</span>
+            Adicionando alterações para a área de testes
           </h3>
 
           <p>
-            A <span class="instructions-term">commit</span> is a change, or a
-            group of changes, we wrap together and tell git to save. It is created
-            in 2 steps: the first one is adding all the changes we want to the
-            <span class="instructions-term">staging area</span>.
-          </p>
-          <p>
-            To add changes to the <span class="instructions-term">staging area</span>
-            we use the command <span class="instructions-term">git add</span>.
-            The next command moves the changes of the file
-            <span class="instructions-term">tasks.txt</span> from the working
-            directory to the staging area.
+            Um <span class="instructions-term">commit</span> é uma mudança ou um
+            grupo de mudanças, nós envolvemos em conjunto e
+            dizemos para o git salvar. Ele é criado em 2 etapas: a primeira é a
+            adição de todas as mudanças que fizermos para a
+            <span class="instructions-term">área de testes.</span>
           </p>
 
-          <a class="command-trigger">
-            git add tasks.txt
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <p>
+            Para adicionar as mudanças para a
+            <span class="instructions-term">área de teste</span>
+             usamos o comando <span class="instructions-term">git add.</span>
+            O próximo comando move as mudanças do arquivo
+            <span class="instructions-term">tasks.txt</span>
+            do diretório de trabalho para a área de teste.
+          </p>
+          <a class="command-trigger">git add tasks.txt</a>
+          <a class="instructions-link next-step hidden">Próximo</a>
         </div>
+
         <div class="hidden step step4" data-id="4">
+
           <h3>
-            <span class="instructions-step">4/13</span> Creating our first commit
+            <span class="instructions-step">4/13</span> Criando nosso primeiro commit
           </h3>
 
           <p>
-            Before, we saw the first of the 2 steps to create a commit.
+            Anteriormente, vimos a primeira das 2 etapas para criar um commit.
           </p>
-          <p>
-            The second step is explicitly telling git to wrap all the changes
-            currently in the staging area into a commit node. We do this with the
-            command <span class="instructions-term">git commit</span>.
-          </p>
-          <p>
-            We give each commit a message to easily identify its contents later.
-            To pass a message to <span class="instructions-term">git commit</span>
-            we use the option <span class="instructions-term">–m</span>.
-          </p>
-          <p>
-            The next command will create our first commit with the message
-            <span class="instructions-term">Add file tasks.txt</span>.
-          </p>
-          <a class="command-trigger">
-            git commit –m "Add file tasks.txt"
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
-        </div>
-        <div class="hidden step step5" data-id="5">
-          <h3><span class="instructions-step">5/13</span> Modifying a file</h3>
 
           <p>
-            The <span class="instructions-term">echo</span> command mixed with
-            <span class="instructions-term">&gt;&gt;</span> adds lines to the
-            end of a file.
+            O segundo passo é dizer explicitamente para o git envolver todas as
+            alterações atuais na área de teste em um commit.
+            Nós podemos fazer isso com o comando
+            <span class="instructions-term">git commit.</span>
           </p>
+
           <p>
-            The first task we want to do is to <span class="instructions-term">Buy milk</span>.
-            So we will add it to our file <span class="instructions-term">tasks.txt</span>
-            with the <span class="instructions-term">echo</span> command.
+            Damos cada commit uma mensagem para identificar facilmente
+            o seu conteúdo mais tarde.
+            Para passar uma mensagem para o
+            <span class="instructions-term">git commit</span> usamos a opção
+            <span class="instructions-term">-m.</span>
           </p>
+
           <p>
-            Look how git tells us that the file has changed by adding it to the
-            working directory area.
+            O próximo comando irá criar o nosso primeiro commit com a mensagem
+            <span class="instructions-term">Add file tasks.txt .</span>
           </p>
-          <a class="command-trigger">
-            echo "Buy milk" &gt;&gt; tasks.txt
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+
+          <a class="command-trigger">git commit -m "Add file tasks.txt"</a>
+          <a class="instructions-link next-step hidden">Próximo</a>
+        </div>
+
+        <div class="hidden step step5" data-id="5">
+          <h3><span class="instructions-step">5/13</span> Modificando um arquivo</h3>
+
+          <p>
+            O comando <span class="instructions-term">echo</span> misturado com
+             <span class="instructions-term">&gt;&gt;</span>
+             adiciona linhas ao final de um arquivo.
+          </p>
+
+          <p>
+            A primeira tarefa que nós iremos fazer é
+            <span class="instructions-term">Comprar Leite.</span>
+            Então vamos adicioná-lo ao nosso arquivo
+            <span class="instructions-term">tasks.txt</span> com o comando
+            <span class="instructions-term">echo.</span>
+          </p>
+
+          <p>
+            Veja como o git nos diz que o arquivo foi alterado,
+            adicionando-o para o diretório de trabalho.
+          </p>
+          <a class="command-trigger">echo "Buy Milk" &gt;&gt; tasks.txt</a>
+          <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step6" data-id="6">
-          <h3><span class="instructions-step">6/13</span> Git status</h3>
+          <h3><span class="instructions-step">6/13</span> Git Status</h3>
 
           <p>
-            Another useful command is <span class="instructions-term">git status</span>.
-            This command shows us the changes we have inside the working directory
-            and the staging area.
+            Outro comando útil é o
+            <span class="instructions-term">git status.</span>
+            Este comando nos mostra as mudanças que temos dentro do diretório
+            de trabalho e a  área de teste.
           </p>
+          
           <p>
-            Look at the output of the command in the console (bottom left).
-            <span class="instructions-term">git status</span> will tell us that
-            the changes are not staged (this means that the changes are inside
-            the working directory). All the files with changes inside the working
-            directory will be shown in red. And the file
-            <span class="instructions-term">tasks.txt</span> has a modified status
-            because we add a line to it in the last step.
+            Olhe para a saída do comando no console (canto inferior esquerdo).
+            O <span class="instructions-term">git status</span> vai nos dizer que
+             as mudanças não foram organizadas (isso significa que as mudanças
+             estão dentro do diretório de trabalho).
           </p>
-          <a class="command-trigger">
-            git status
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+
+          <p>
+            Todos os arquivos com
+           alterações dentro do diretório de trabalho serão mostradas em vermelho.
+           E o arquivo <span class="instructions-term">tasks.txt</span>
+           tem um status modificado porque nós adicionamos uma linha para
+           ele na última etapa.
+          </p>
+          <a class="command-trigger">git status</a>
+
+ <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step7" data-id="7">
           <h3>
-            <span class="instructions-step">7/13</span> Detailed list of changes
+            <span class="instructions-step">7/13</span> Detalhando Mudanças
           </h3>
 
           <p>
-            The command <span class="instructions-term">git status</span> just
-            shows us the names of the files with changes. If we want to know what
-            changed inside each file of the working directory, we can use the
-            command <span class="instructions-term">git diff</span>.
+            O comando <span class="instructions-term">git status</span> apenas
+            nos mostra os nomes dos arquivos com alterações. Se quisermos saber
+            o que mudou dentro de cada arquivo do diretório de trabalho,
+            podemos usar o comando <span class="instructions-term">git diff.</span>
           </p>
-          <p>
-            In the output of <span class="instructions-term">git diff</span>,
-            the lines that we added to the file are shown in green, and the ones
-            that we removed are shown in red.
-          </p>
-          <a class="command-trigger">
-            git diff
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
-        </div>
-        <div class="hidden step step8" data-id="8">
-          <h3><span class="instructions-step">8/13</span> Add again</h3>
 
           <p>
-            We want to create another commit with the changes we did to
-            <span class="instructions-term">tasks.txt</span>. We need to add the
-            changes to the staging area again with the command
-            <span class="instructions-term">git add</span>.
+            Na saída do <span class="instructions-term">git diff,</span> as
+            linhas que adicionamos ao arquivo são mostrados em verde, e os que
+            foram removidos são mostrados em vermelho.
           </p>
-          <a class="command-trigger">
-            git add tasks.txt
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git diff</a>
+
+<a class="instructions-link next-step hidden">Próximo</a>
+        </div>
+        <div class="hidden step step8" data-id="8">
+          <h3><span class="instructions-step">8/13</span> Add novamente</h3>
+
+          <p>
+            Nós queremos criar um outro commit com as alterações que fizemos em <span class="instructions-term">tasks.txt.</span> Nós precisamos adicionar essas mudanças para a área de testes novamente com o comando <span class="instructions-term">git</span> <span class="instructions-term">add.</span>
+          </p>
+          <a class="command-trigger">git add tasks.txt</a>
+
+ <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step9" data-id="9">
           <h3><span class="instructions-step">9/13</span> Git status 2</h3>
 
           <p>
-            We can use the command <span class="instructions-term">git status</span>
-            again to see the message git gives us when we have staged changes.
-            The file <span class="instructions-term">tasks.txt</span> still
-            appears with a modified status, but the color has changed to green
-            which means the changes are inside the staging area.
+            Podemos usar o comando <span class="instructions-term">git status</span>  novamente para ver a mensagem que o git nos mostra quando fazemos as mudanças.
+            O arquivo <span class="instructions-term">tasks.txt</span> ainda aparece com um status modificado, mas a cor mudou para verde, o que significa que as alterações estão dentro da área de testes.
           </p>
 
-          <a class="command-trigger">
-            git status
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git status</a>
+
+ <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step10" data-id="10">
-          <h3><span class="instructions-step">10/13</span> Detailed changes 2</h3>
+          <h3><span class="instructions-step">10/13</span> Detalhando Mudanças 2 </h3>
 
           <p>
-            In step 7 we used the command <span class="instructions-term">git diff</span>
-            to see the detailed list of changes we had inside the working directory.
+            Na etapa 7 foi utilizado o comando <span class="instructions-term">git</span> <span class="instructions-term">diff</span>  para ver a lista detalhada das mudanças que tivemos dentro do diretório de trabalho.
           </p>
           <p>
-            This command can also show the changes inside the staging area, if we
-            pass the option <span class="instructions-term">––cached</span> to it.
+            Este comando também pode mostrar as mudanças dentro da área de testes, se usarmos a opção <span class="instructions-term">--cached</span> nele.
           </p>
           <p>
-            The output has the same color code: the lines that we added are shown
-            in green, and the ones that we removed are shown in red.
+            A saída tem o mesmo código de cores: as linhas que adicionamos são mostrados em verde, e os que nós removemos são mostrados em vermelho.
           </p>
-          <a class="command-trigger">
-            git diff ––cached
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git diff --cached</a>
+
+<a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step11" data-id="11">
-          <h3><span class="instructions-step">11/13</span> Our second commit</h3>
+          <h3><span class="instructions-step">11/13</span> Nosso Segundo Commit</h3>
 
           <p>
-            We want the changes in the staging area to be a new commit.
-            We use the command <span class="instructions-term">git commit</span>
-            again, and pass a descriptive message that identifies this commit.
+            Queremos que as mudanças na área de teste sejam commitadas.
+            Usaremos o comando <span class="instructions-term">git</span> <span class="instructions-term">commit</span> novamente, e passaremos uma mensagem descritiva para este commit.
           </p>
-          <a class="command-trigger">
-            git commit –m "Add first task"
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git commit -m "Adicionar primeira tarefa"</a>
+
+<a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step12" data-id="12">
-          <h3><span class="instructions-step">12/13</span> Seeing our commits</h3>
+          <h3><span class="instructions-step">12/13</span> Ver os Nossos Commits</h3>
 
           <p>
-            The command that completes this tutorial is
-            <span class="instructions-term">git log</span>. This command shows
-            us the commits we have made.
+            O comando que completa este tutorial é <span class="instructions-term">git log.</span> Este comando nos mostra os commits que fizemos.
           </p>
           <p>
-            <span class="instructions-term">git log</span> has various options
-            to show the output with different detail levels. We use the option
-            <span class="instructions-term">––oneline</span> to see the output
-            in a short format.
+            O <span class="instructions-term">git log</span> tem várias opções para mostrar na saída com diferentes níveis de detalhe. Usamos a opção <span class="instructions-term">--oneline</span> para ver a saída em um formato curto.
           </p>
-          <a class="command-trigger">
-            git log ––oneline
-          </a>
-          <a class="instructions-link next-step hidden">Next</a>
+          <a class="command-trigger">git log --oneline</a>
+
+ <a class="instructions-link next-step hidden">Próximo</a>
         </div>
         <div class="hidden step step13" data-id="13">
-          <h3><span class="instructions-step">13/13</span> Closing</h3>
+          <h3><span class="instructions-step">13/13</span> Encerramento</h3>
 
           <p>
-            This tutorial has all the basic commands you need to start using git
-            in your personal projects.
+            Este tutorial tem todos os comandos básicos que você precisa para começar a usar git em seus projetos pessoais.
           </p>
           <p>
-            There is a lot more to learn about git, look at the <a class="instructions-link"
-            href="resources.html">Resources</a> section for a list of next steps to expand your knowledge
-            of git.
+            Há muito mais a aprender sobre git, veja a seção de <a class="instructions-link" href="resources.html">Recursos</a> para uma lista dos próximos passos para expandir o seu conhecimento de git.
           </p>
           <p>
-            Also you can use the <a class="instructions-link" href="cheatsheet.html">
-            Cheatsheet</a> section as a reference. It has all the commands in this
-            tutorial with explanations for the most used options.
+            Além disso, você pode usar o <a class="instructions-link" href="cheatsheet.html">Cheatsheet</a> como uma referência. Ele tem todos os comandos deste tutorial com explicações para as opções mais utilizadas.
           </p>
         </div>
       </div>
       <div class="console">
         <div class="console-command-group step1">
-          <span class="console-prompt">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt">&gt;</span> <span class="console-bash-command"></span>
           <div class="console-output hidden">
             Initialized empty git repository in my_folder/.git/
           </div>
         </div>
         <div class="console-command-group step2">
-          <span class="console-prompt hidden">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt hidden">&gt;</span> <span class="console-bash-command"></span>
         </div>
         <div class="console-command-group step3">
-          <span class="console-prompt hidden">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt hidden">&gt;</span> <span class="console-bash-command"></span>
         </div>
         <div class="console-command-group step4">
-          <span class="console-prompt hidden">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt hidden">&gt;</span> <span class="console-bash-command"></span>
           <div class="console-output hidden">
             <div>
               [master (root-commit) <span>cc04c1f</span>] <span>Add file tasks.txt</span>
@@ -396,8 +390,7 @@
           <span class="console-bash-command"></span>
         </div>
         <div class="console-command-group step6">
-          <span class="console-prompt hidden">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt hidden">&gt;</span> <span class="console-bash-command"></span>
           <div class="console-output hidden">
             <div>On branch master</div>
             <div>Changes not staged for commit:</div>
@@ -416,8 +409,7 @@
           </div>
         </div>
         <div class="console-command-group step7">
-          <span class="console-prompt hidden">&gt;</span>
-          <span class="console-bash-command"></span>
+          <span class="console-prompt hidden">&gt;</span> <span class="console-bash-command"></span>
           <div class="console-output hidden">
             <div>diff ––git a/tasks.txt b/tasks.txt</div>
             <div>index e69de29..557fb5d 100644</div>
@@ -488,30 +480,25 @@
 
     <div id="app">
       <div class="area hidden">
-        <h2 class="area-title hidden">Working directory</h2>
+        <h2 class="area-title hidden">Diretório de Trabalho</h2>
         <div id="working-dir">
         </div>
       </div>
       <div class="area hidden">
-        <h2 class="area-title hidden">Staging area</h2>
+        <h2 class="area-title hidden">Área de Testes</h2>
         <div id="staging">
         </div>
       </div>
       <div class="area hidden">
-        <h2 class="area-title hidden">Local repository</h2>
+        <h2 class="area-title hidden">Repositório Local</h2>
         <div id="local-repository">
         </div>
       </div>
     </div>
   </div>
-  <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
   </script>
-  <script
-    src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
-    type="text/javascript">
+  <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" type="text/javascript">
   </script>
   <script type="text/javascript" src="app.js"></script>
 </body>
